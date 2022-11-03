@@ -29,6 +29,30 @@ const ItemSideBar = (props) => {
             </a>
           </li>
           <li>
+            <a href="/Tree">
+              <i className="bx bxs-tree" />
+              <span className="links_name">Tree</span>
+            </a>
+          </li>
+          <li>
+            <a href="/StockAgent">
+              <i className="bx bxs-truck" />
+              <span className="links_name">StockAgent</span>
+            </a>
+          </li>
+          <li>
+            <a href="/MemberAccount">
+              <i className="bx bxs-mobile" />
+              <span className="links_name">MemberAccount</span>
+            </a>
+          </li>
+          <li>
+            <a href="/RegisterMember">
+              <i className="bx bxs-user" />
+              <span className="links_name">RegisterMember</span>
+            </a>
+          </li>
+          <li>
             <a href="/Transfer">
               <i className="bx bx-transfer" />
               <span className="links_name">Transfer</span>

@@ -301,69 +301,69 @@ function RegisterDownline(props) {
       }
 
 
-      const handlePagePackage = () => {
-            if(form.name !== null && form.address !==null && form.email !==null && form.password !==null && form.phone !==null){
-                  if(form.password === confirm){
-                        let isAmounted = false
-                        if(!isAmounted) {
-                              setLoading(true);
-                              axios.get('https://testadmin.belogherbal.com/api/close/activation-type',{
-                                    headers: {
-                                          cancelToken :'',
-                                          Authorization: (datatoken ==null ? null : `Bearer ${datatoken}`),
-                                          'Accept' : 'application/json' 
-                                    }
-                              }).then((res) => {
-                                      setActivations(res.data.data)
-                                    let dataActivationsArr = []
-                                    let bvPrev = 0
-                                    let firstSelected = 0
-                                    if (dataType == 'Upgrade') {
-                                          console.log('Upgrade',dataType)
-                                          let dataActivations = res.data.data
-                                          dataActivations.map((item, index) => {
-                                                setName(item.name)
-                                            if (item.id == dataForm.activations.id) {
-                                              bvPrev = item.bv_min
-                                            }
-                                            if (item.id > dataForm.activations.id) {
-                                              dataActivationsArr[index] = { id: item.id, name: item.name, type: item.type, bv_min: item.bv_min - bvPrev, bv_max: item.bv_max - bvPrev }
-                                              if (firstSelected == 0 && checkeddef==0) {
-                                                setStatus(item.name)
-                                                setBvmin((item.bv_min - bvPrev)*1000)
-                                                setActivationType(item.id)
-                                                setCheckeddef(1)
-                                              }
-                                              firstSelected = firstSelected + 1
-                                            }
-                                          })
-                                        } else {
-                                          console.log('Not Upgrade',dataType)
-                                          setActivations(res.data.data)
-                                    }
-                                    console.log('data res activation1',res.data.data)
+      // const handlePagePackage = () => {
+      //       if(form.name !== null && form.address !==null && form.email !==null && form.password !==null && form.phone !==null){
+      //             if(form.password === confirm){
+      //                   let isAmounted = false
+      //                   if(!isAmounted) {
+      //                         setLoading(true);
+      //                         axios.get('https://testadmin.belogherbal.com/api/close/activation-type',{
+      //                               headers: {
+      //                                     cancelToken :'',
+      //                                     Authorization: (datatoken ==null ? null : `Bearer ${datatoken}`),
+      //                                     'Accept' : 'application/json' 
+      //                               }
+      //                         }).then((res) => {
+      //                                 setActivations(res.data.data)
+      //                               let dataActivationsArr = []
+      //                               let bvPrev = 0
+      //                               let firstSelected = 0
+      //                               if (dataType == 'Upgrade') {
+      //                                     console.log('Upgrade',dataType)
+      //                                     let dataActivations = res.data.data
+      //                                     dataActivations.map((item, index) => {
+      //                                           setName(item.name)
+      //                                       if (item.id == dataForm.activations.id) {
+      //                                         bvPrev = item.bv_min
+      //                                       }
+      //                                       if (item.id > dataForm.activations.id) {
+      //                                         dataActivationsArr[index] = { id: item.id, name: item.name, type: item.type, bv_min: item.bv_min - bvPrev, bv_max: item.bv_max - bvPrev }
+      //                                         if (firstSelected == 0 && checkeddef==0) {
+      //                                           setStatus(item.name)
+      //                                           setBvmin((item.bv_min - bvPrev)*1000)
+      //                                           setActivationType(item.id)
+      //                                           setCheckeddef(1)
+      //                                         }
+      //                                         firstSelected = firstSelected + 1
+      //                                       }
+      //                                     })
+      //                                   } else {
+      //                                     console.log('Not Upgrade',dataType)
+      //                                     setActivations(res.data.data)
+      //                               }
+      //                               console.log('data res activation1',res.data.data)
                                 
 
-                              setLoading(false)
-                              }).catch((e) => {
-                                    console.log(e);
-                                    setLoading(false)
-                              })   
-                              // setPageRegister(false)
-                              setPagePackage(true)
-                              history
-                        } return () => {
-                              Source.cancel('cancel api')
-                              isAmounted = true;
-                        }
+      //                         setLoading(false)
+      //                         }).catch((e) => {
+      //                               console.log(e);
+      //                               setLoading(false)
+      //                         })   
+      //                         // setPageRegister(false)
+      //                         setPagePackage(true)
+      //                         history
+      //                   } return () => {
+      //                         Source.cancel('cancel api')
+      //                         isAmounted = true;
+      //                   }
                        
-                  }else{
-                        alert('password anda tidak sama')
-                  }
-            }else{
-                  alert('mohon lengkapi data')
-            }
-      }
+      //             }else{
+      //                   alert('password anda tidak sama')
+      //             }
+      //       }else{
+      //             alert('mohon lengkapi data')
+      //       }
+      // }
 
       const checkBvmin = (a, b, c) => {
             setBvmin(a)

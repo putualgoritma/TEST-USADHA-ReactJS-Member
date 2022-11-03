@@ -52,6 +52,7 @@ import Management4 from './images/management/mng4.png'
 import Management5 from './images/management/mng5.png'
 import Management6 from './images/management/mng6.png'
 import BannerAgen from './images/banner-agen.jpg'
+import userImage from './images/userImage/userImage.png'
 
 export {
     Logo,
@@ -62,6 +63,7 @@ export {
     ImageHome2,
     ImageHome3,
     ImageHome4,
+    userImage,
     Product1,
     Product2,
     Product3,

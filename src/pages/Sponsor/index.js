@@ -219,7 +219,7 @@ function Sponsor  () {
                 </div>
                 <div className="login">
                     <div className="mb-3">
-                        <button onClick={() => {if(window.confirm('Transfer sekarang ?')){handleTransfer()};}}   className="button1" type="button">Pilih Sponsor</button>
+                        <button onClick={() => {if(window.confirm('Transfer sekarang ?')){};}}   className="button1" type="button">Pilih Sponsor</button>
                     </div>     
                 </div>
             </div>

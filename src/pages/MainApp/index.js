@@ -31,7 +31,12 @@ import {
     Testing,
     Agens,
     Sponsor,
+    Tree,
 } from '../../pages';
+import StockAgent from '../StockAgent';
+import RegisterMember from '../RegisterMember';
+import MemberAccount from '../MemberAccount';
+import SwitchAccount from '../MemberAccount/SwitchAccount';
 import HistoryOrderDetail from '../../component/HistoryOrderDetail';
 
 const MainApp = () =>{
@@ -41,6 +46,23 @@ const MainApp = () =>{
                 {/* <Route path='/products/:id'>
                     <Products/>
                 </Route> */}
+                  <Route path="/Tree">
+                    <Tree/>
+                </Route>
+                <Route path="/StockAgent">
+                    <StockAgent/>
+                </Route>
+                <Route path="/RegisterMember">
+                    <RegisterMember/>
+                </Route>
+                <Route path="/MemberAccount">
+                    <MemberAccount/>
+                </Route>
+                <Route path="/SwitchAccount">
+                    <SwitchAccount/>
+                </Route>
+
+
                 <Route path="/Sponsor">
                     <Sponsor/>
                 </Route>

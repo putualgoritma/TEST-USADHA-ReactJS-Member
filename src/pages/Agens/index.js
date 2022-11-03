@@ -70,9 +70,9 @@ function Agens(props) {
         dataActivasi.activationtype = activationType;
         dataActivasi.agents_id = idagents;
         API.activasinew(dataActivasi, TOKEN).then((result) => {
-            sessionStorage.removeItem('BVMIN'),
-            sessionStorage.removeItem('PCART'),
-            sessionStorage.removeItem('RADIO'),
+            sessionStorage.removeItem('BVMIN')
+            sessionStorage.removeItem('PCART')
+            sessionStorage.removeItem('RADIO')
             sessionStorage.removeItem('FORMACTIVASI')
             sessionStorage.removeItem('ACTIVATIONTYPE')
             sessionStorage.removeItem('DATATYPE')
@@ -100,9 +100,9 @@ function Agens(props) {
         console.log('data dari jaringan',dataJaringan);
             API.registerdownlinenew(dataJaringan, TOKEN).then((result) => {
                 // history.push(`landing/Register Downline Berhasil/registerdownline`)
-                    sessionStorage.removeItem('BVMIN'),
-                    sessionStorage.removeItem('PCART'),
-                    sessionStorage.removeItem('RADIO'),
+                    sessionStorage.removeItem('BVMIN')
+                    sessionStorage.removeItem('PCART')
+                    sessionStorage.removeItem('RADIO')
                     sessionStorage.removeItem('FORMREGIS')
                     sessionStorage.removeItem('ACTIVATIONTYPE')
                     sessionStorage.removeItem('DATATYPE')
@@ -128,9 +128,9 @@ function Agens(props) {
         dataUpgrade.activationtype = activationType;
         console.log('datanya',dataUpgrade)
         API.upgradenew(dataUpgrade, TOKEN).then((result) => {
-                sessionStorage.removeItem('BVMIN'),
-                sessionStorage.removeItem('PCART'),
-                sessionStorage.removeItem('RADIO'),
+                sessionStorage.removeItem('BVMIN')
+                sessionStorage.removeItem('PCART')
+                sessionStorage.removeItem('RADIO')
                 sessionStorage.removeItem('FORMUPGRADE')
                 sessionStorage.removeItem('ACTIVATIONTYPE')
                 sessionStorage.removeItem('DATATYPE')

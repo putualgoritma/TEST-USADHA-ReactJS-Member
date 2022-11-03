@@ -28,10 +28,12 @@ import DetailPackage from './DetailPackage'
 import Testing from './Testing'
 import Agens from './Agens'
 import Sponsor from './Sponsor'
+import Tree from './Tree'
 
 
 export{
     Home,
+    Tree,
     About,
     Product,
     Testimoni,
